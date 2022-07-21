@@ -1,271 +1,303 @@
-body{
-   
-
-    font-family: 'BIZ UDMincho', serif;
-    font-family: 'Lobster', cursive;
-    font-family: 'Tiro Kannada', serif;
-
-
+body {
+  font-family: "BIZ UDMincho", serif;
+  font-family: "Lobster", cursive;
+  font-family: "Tiro Kannada", serif;
 }
 
-/* Media Adjustment */
+/* ----------------------
+    Top Section Design
+ ---------------------- */
+main {
+  display: flex;
+  justify-content: center;
+}
+.introduction-block {
+  display: flex;
 
-/* For Mobile */
-
-@media only screen and (max-width: 670px) {
-
-    .introduction-block{
-        flex-direction: column;
-      width: 100%;
-      
-    }
-
-
-
-.main-image image{
-    width: 100%;
-    height: 100%;
+  align-items: center;
+  background-color: black;
+  width: 82%;
+  height: 40%;
+  border-radius: 10px;
 }
 
-.content,.footer-menu{
-    flex-direction: column;
-    
-    width: 100%;
+.text-introduction {
+  width: 50%;
+  padding-left: 50px;
 }
 
-
-.menu-bar{
-
-    width: 100%;
-    height: 100%;
-}
-
-
-
-.blog{
-   grid-template-columns: repeat(1,1fr);
-width: 100%;
-}
-
-
-
-
-
-
-}
-
-
-
-
-
-/* Animation */
-@keyframes jumping{
-    5%{
-        color: aqua;
-        transform: rotate(30deg)
-    }
-
-    25%{
-       color: chartreuse;
-    }
-    50%{
-       color: crimson;
-    }
-    75%{
-        color:purple;
-    }
-    100%{
-        color:yellow;
-    }
-}
-
-.introduction-block{
-    display: flex;
-   
-    align-items: center;
-    background-color: black;
-    width: 82%;
-    height: 70%;
-    border-radius: 10px;
-   margin: 4% 9.2%;
-}
-
-
-.introduction-block:hover  h1{
-    animation: jumping 5s ease-in-out  5 ;
-    animation-play-state: running;
-    ;
-}
-
-.text-introduction{
-    width: 50%;
-    padding-left: 50px;
-
-  
-}
-
-.main-image img{
+.main-image img {
   width: 80%;
   height: 100%;
   padding-left: 15%;
-  
-    
-
 }
 
-h1,p{
-    color: white;
-
+h1,
+p {
+  color: white;
 }
 
- .button a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-.button{
-    
-    width: 140px;
-    height: 30px;
-    border: 3px solid rgb(53, 4, 230);
-    border-radius: 10px;
-    background-color: transparent;
-    text-align: center;
+.button a {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
-.content{
-    display: flex;
- margin-top: 5%;
-}
-.menu-bar{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-left: 54%;
-    width: 230px;
-    height: 280px;
-    border-radius: 10px;
-    background-color: black;
-   
+/* ----------------------
+       Button Design
+ ---------------------- */
+.button {
+  width: 140px;
+  height: 30px;
+  border: 3px solid rgb(53, 4, 230);
+  border-radius: 10px;
+  background-color: black;
+  text-align: center;
 }
 
-.blog{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    row-gap: 2.5%;
-    column-gap: 2.5%;
-    margin-left:37%;
-    
-  
-}
-.blog-post{
-    width: 230px;
-    height: 330px;
-    border: 2px solid black;
-    border-radius: 5%;
-    background-color: transparent;
-  
-
-}
-.match{
-    width: 239px;
-    height: 200px;
-    border: 1px solid gray;
-    text-align: center;
-    border-radius: 10px;
-    
-}
-.vs-flag{
-    display: flex;
-    justify-content: space-evenly;
-   padding-top: 8%;
-    align-items: center;
+#tablet-button {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0;
+  visibility: hidden;
 }
 
-
-.blog-post img{
-    width: 100%;
-    border-radius: 5%;
+#tablet-button a {
+  color: crimson;
 }
 
-.blog-post p{
-    padding-left: 3%;
+.content {
+  display: flex;
+  margin-top: 5%;
 }
-.blog-post a{
-    text-decoration: none;
-    color: gray;
-
-
-    padding-bottom: 2px;
+/* ----------------------
+        Menu Design
+ ---------------------- */
+.menu-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 54%;
+  width: 230px;
+  height: 280px;
+  border-radius: 10px;
+  background-color: black;
 }
-.transfer-button{
- 
-    border: 1px solid gray;
-    border-radius: 5px;
+
+/* ----------------------
+     Blog Post Design
+ ---------------------- */
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
+  column-gap: 50px;
+  margin-left: 184px;
+}
+.blog-post {
+  width: 230px;
+  height: 330px;
+  border: 2px solid black;
+  border-radius: 5%;
+  background-color: transparent;
+}
+.match {
+  width: 239px;
+  height: 200px;
+  border: 1px solid gray;
+  text-align: center;
+  border-radius: 10px;
+}
+.vs-flag {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 8%;
+  align-items: center;
+}
+
+.blog-post img {
+  width: 100%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.blog-post p {
+  padding-left: 3%;
+}
+.blog-post a {
+  text-decoration: none;
+  color: gray;
+}
+.blog-post p {
+  color: black;
+  font-weight: 900;
+
+  padding-bottom: 2px;
+}
+.transfer-button {
+  border: 1px solid gray;
+  border-radius: 5px;
   margin-left: 3%;
-   text-align: center;
+  text-align: center;
 }
 
-.small-icon{
-
-    display: flex;
-    padding-left: 5%;
-  
- 
-   
- 
+/* ----------------------
+        Icon Design
+ ---------------------- */
+.small-icon {
+  display: flex;
+  padding-left: 5%;
 }
 
-.small-icon p{
-    padding-left: 10%;
-
-
-   
-}  
-
-.fa-clock, .fa-comment-dots{
-    color: gray;
-    padding-right: 5px;
-    
+.small-icon p {
+  padding-left: 10%;
 }
 
-.blog-post p{
-    color: black;
-    font-weight: 900;
-  
+.fa-clock,
+.fa-comment-dots {
+  color: gray;
+  padding-right: 5px;
 }
 
+/* ---------Footer Design--------- */
 
-.ending{
-    margin-top: 15%;
- padding-top: 5%;
- padding-bottom: 8%;
-    height: 30%;
-    background-color: hsl(240, 0%, 10%);
-    text-align: center;
-  
+.ending {
+  margin-top: 15%;
+  padding-top: 5%;
+  padding-bottom: 8%;
+  height: 30%;
+  background-color: hsl(240, 0%, 10%);
+  text-align: center;
 }
 
-hr{
-    width: 70%;
-    background-color: gray;
-    height: 1px;
-    border: none;
-   
+hr {
+  width: 70%;
+  background-color: gray;
+  height: 1px;
+  border: none;
 }
 
-.footer-menu{
-    display: flex;
-   align-items: center;
-   justify-content: center;
-    
-
-    
+.footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-menu a {
-    text-decoration: none;
-    color: gray;
-    padding-right: 4%;
+  text-decoration: none;
+  color: gray;
+  padding-right: 4%;
+}
+
+/* Media  Screen Adjustment */
+
+/* For Mobile Device*/
+
+@media screen and (max-width: 670px) {
+  .content {
+    flex-direction: column;
+  }
+
+  aside {
+    display: flex;
+    justify-content: center;
+    margin: 10% 0;
+  }
+
+  .menu-bar {
+    margin: 0;
+  }
+
+  .introduction-block {
+    width: 500px;
+    height: 800px;
+  }
+
+  .blog-post {
+    width: 80%;
+    height: 100%;
+  }
+
+  .blog {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  #tablet-button {
+    visibility: hidden;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+  }
+}
+
+/* For Tablet Device */
+
+@media only screen and (min-width: 671px) and (max-width: 991px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .introduction-block {
+    width: 100%;
+  }
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin: 0;
+    width: 100%;
+  }
+  .blog-post {
+    width: 90%;
+    height: 100%;
+  }
+
+  #tablet-button {
+    display: flex;
+    justify-content: center;
+    visibility: visible;
+  }
+
+  .menu-bar {
+    flex-direction: row;
+    width: 850px;
+    height: 300px;
+    background-color: transparent;
+    width: 100%;
+
+    margin: 0;
+  }
+}
+
+/* Animation */
+@keyframes jumping {
+  5% {
+    color: aqua;
+  }
+
+  25% {
+    color: chartreuse;
+    transform: translate(-10%);
+  }
+  50% {
+    color: crimson;
+    transform: translate(10%);
+  }
+  75% {
+    color: purple;
+    transform: translate(-10%);
+  }
+  100% {
+    color: yellow;
+    transform: translate(10%);
+  }
+}
+
+.introduction-block:hover h1 {
+  animation: jumping 5s ease-in-out 5;
+  animation-play-state: running;
 }
